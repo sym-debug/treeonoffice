@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>결재 서류 | TreeON Office</title>
+<meta name="description" content="TreeON Office 이용자 화면">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://treeon.netlify.app/app/approval.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TreeON Office">
+<meta property="og:title" content="결재 서류 | TreeON Office">
+<meta property="og:description" content="TreeON Office 이용자 화면">
+<meta property="og:url" content="https://treeon.netlify.app/app/approval.html">
+<meta property="og:image" content="https://treeon.netlify.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d2f5f">
+<meta name="img-base" content="../assets/img/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134a92'/%3E%3Cpath d='M18 50V26l14-10 14 10v24M26 50V34h12v16' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='27' r='3' fill='%2300a394'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261124">
+</head>
+<body class="app auth-pending" data-page="approval">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="shell">
+  <aside class="side">
+    <a href="../index.html" aria-label="TreeON Office 소개 페이지"><img class="logo" src="../assets/img/logo-white.png" alt="TreeON Office" width="151" height="28"></a>
+    <nav aria-label="이용자 메뉴"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a><a href="reserve.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>오피스 예약</span></a><a href="office.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>오피스 이용</span></a><a href="report.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>집중도 리포트</span></a><a href="approval.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 13l2 2 4-4"/></svg><span>결재 서류</span></a><a href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>이용 안내</span></a></nav>
+    <div class="me"><b data-me-name></b><span data-me-company></span><button type="button" data-logout>로그아웃</button></div>
+  </aside>
+  <div>
+    <header class="topbar"><a href="index.html" aria-label="홈"><img src="../assets/img/logo.png" alt="TreeON Office" width="130" height="24"></a><button type="button" data-logout>로그아웃</button></header>
+    <main class="main" id="main">
+      <p class="sample-flag no-print" style="margin-bottom:18px">시장검증용 체험 버전 · 실제 예약·결제·출입은 이루어지지 않습니다</p>
+
+      <div class="page-head"><div><h1>결재 서류 신청</h1><p>사내 결재와 정산에 필요한 서류를 한 번에 신청합니다.</p></div></div>
+      <div class="grid-app">
+        <form id="doc-form" class="panel c8 form" novalidate>
+          <div class="field full"><label for="doc-res">연결할 예약</label><select id="doc-res" name="res"></select></div>
+          <fieldset class="field full" style="border:0;padding:0;margin:0"><legend class="lab" style="margin-bottom:8px;font-size:.9rem;font-weight:650">필요한 서류</legend><div class="docs" id="doc-types"></div></fieldset>
+          <div class="field"><label for="d-company">회사명<span class="req">*</span></label><input id="d-company" name="company" type="text" required></div>
+          <div class="field"><label for="d-biz">사업자등록번호</label><input id="d-biz" name="bizno" type="text" inputmode="numeric" placeholder="000-00-00000" pattern="\d{3}-\d{2}-\d{5}"><span class="hint">세금계산서 발행에 필요합니다.</span></div>
+          <div class="field"><label for="d-email">받을 이메일<span class="req">*</span></label><input id="d-email" name="email" type="email" required></div>
+          <div class="field"><label for="d-due">필요한 날짜<span class="req">*</span></label><input id="d-due" name="due" type="date" required></div>
+          <div class="field full"><label for="d-memo">요청 사항</label><textarea id="d-memo" name="memo" placeholder="회사 품의서 양식, 수신자 추가, 영문 서류 필요 여부 등"></textarea></div>
+          <div class="full"><button class="btn" type="submit">서류 신청하기</button></div>
+        </form>
+        <div class="panel c4">
+          <h2>처리 방식</h2>
+          <ul class="list">
+            <li><div class="stack-sm" style="gap:2px"><span class="t">견적서 · 품의서 초안</span><span class="s">신청 즉시 미리보기·출력</span></div></li>
+            <li><div class="stack-sm" style="gap:2px"><span class="t">이용·근태·보안 확인서</span><span class="s">검토 후 발급, 이메일로도 발송</span></div></li>
+            <li><div class="stack-sm" style="gap:2px"><span class="t">세금계산서 · 거래명세서</span><span class="s">이용 종료 뒤 법인 일괄 발행, 15일 내 입금</span></div></li>
+          </ul>
+          <p class="small">외부 공간 견적과 결재, 보안 설정에 3~5일 걸리던 일을 45분 안에 끝내는 것이 목표입니다.</p>
+        </div>
+        <div class="panel c12"><h2>신청 내역</h2><div id="doc-list"></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+<nav class="tabbar" aria-label="이용자 메뉴"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a><a href="reserve.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>예약</span></a><a href="office.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>이용</span></a><a href="report.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>리포트</span></a><a href="approval.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 13l2 2 4-4"/></svg><span>서류</span></a><a href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>안내</span></a></nav>
+<dialog class="doc-modal" id="doc-modal" aria-labelledby="doc-title">
+  <div class="doc-bar"><b id="doc-title">문서 미리보기</b><div class="btn-row"><button class="btn sm" type="button" data-doc-print>인쇄 · PDF 저장</button><button class="btn sm line" type="button" data-doc-close>닫기</button></div></div>
+  <div class="doc" id="doc-body"></div>
+</dialog>
+<script src="../assets/js/config.js?v=20261124"></script>
+<script src="../assets/js/data.js?v=20261124"></script>
+<script src="../assets/js/auth.js?v=20261124"></script>
+<script src="../assets/js/db.js?v=20261124"></script>
+<script src="../assets/js/gallery.js?v=20261124"></script>
+<script src="../assets/js/app.js?v=20261124"></script>
+</body>
+</html>

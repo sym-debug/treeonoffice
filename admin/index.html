@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>관리자 | TreeON Office</title>
+<meta name="description" content="TreeON Office 관리자">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://treeon.netlify.app/admin/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TreeON Office">
+<meta property="og:title" content="관리자 | TreeON Office">
+<meta property="og:description" content="TreeON Office 관리자">
+<meta property="og:url" content="https://treeon.netlify.app/admin/index.html">
+<meta property="og:image" content="https://treeon.netlify.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d2f5f">
+<meta name="img-base" content="../assets/img/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134a92'/%3E%3Cpath d='M18 50V26l14-10 14 10v24M26 50V34h12v16' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='27' r='3' fill='%2300a394'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261124">
+</head>
+<body class="app admin auth-pending">
+<div class="gate" id="gate" hidden>
+  <div class="gate-card">
+    <img src="../assets/img/logo.png" alt="TreeON Office" width="163" height="30">
+    <div class="stack-sm"><h1>관리자 로그인</h1><p class="small">문의·체험·리포트·사이트 정보를 관리합니다.</p></div>
+    <form id="gate-form" class="form" novalidate></form>
+    <a class="small link" href="../index.html">사이트로 돌아가기</a>
+  </div>
+</div>
+<div class="shell" id="shell" hidden>
+  <aside class="side">
+    <a href="#dash" aria-label="관리자 홈"><img class="logo" src="../assets/img/logo-white.png" alt="TreeON Office" width="151" height="28"></a>
+    <span class="admin-badge">관리자</span>
+    <nav aria-label="관리자 메뉴"><a href="#dash" data-nav="dash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>대시보드</span></a><a href="#leads" data-nav="leads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5 6 5h12l2.5 8.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19z"/><path d="M3.5 13.5H9l1 2h4l1-2h5.5"/></svg><span>문의 관리</span></a><a href="#trials" data-nav="trials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>데모·체험</span></a><a href="#reservations" data-nav="reservations"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>예약·서류</span></a><a href="#reports" data-nav="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>이용 리포트</span></a><a href="#content" data-nav="content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg><span>정보 수정</span></a><a href="#settings" data-nav="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 6.6l2 1.2M17.8 16.2l2 1.2M4.2 17.4l2-1.2M17.8 7.8l2-1.2"/></svg><span>설정</span></a></nav>
+    <div class="me"><b>관리자</b><span id="mode-label"></span><div class="row" style="gap:6px;margin-top:12px"><a class="side-link" href="../index.html" target="_blank" rel="noopener">사이트 보기</a><button type="button" data-admin-logout style="margin-top:0">로그아웃</button></div></div>
+  </aside>
+  <div>
+    <header class="topbar"><img src="../assets/img/logo.png" alt="TreeON Office" width="130" height="24"><button type="button" data-admin-logout>로그아웃</button></header>
+    <main class="main" id="view"></main>
+  </div>
+</div>
+<nav class="tabbar seven" aria-label="관리자 메뉴"><a href="#dash" data-nav="dash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>대시보드</span></a><a href="#leads" data-nav="leads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5 6 5h12l2.5 8.5V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19z"/><path d="M3.5 13.5H9l1 2h4l1-2h5.5"/></svg><span>문의</span></a><a href="#trials" data-nav="trials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>데모</span></a><a href="#reservations" data-nav="reservations"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>예약</span></a><a href="#reports" data-nav="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>리포트</span></a><a href="#content" data-nav="content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg><span>정보 수정</span></a><a href="#settings" data-nav="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 6.6l2 1.2M17.8 16.2l2 1.2M4.2 17.4l2-1.2M17.8 7.8l2-1.2"/></svg><span>설정</span></a></nav>
+<dialog class="drawer" id="drawer" aria-labelledby="drawer-title">
+  <div class="drawer-head"><b id="drawer-title"></b><button type="button" class="lb-x dark" id="drawer-close" aria-label="닫기">×</button></div>
+  <div class="drawer-body stack" id="drawer-body"></div>
+</dialog>
+<script src="../assets/js/config.js?v=20261124"></script>
+<script src="../assets/js/data.js?v=20261124"></script>
+<script src="../assets/js/auth.js?v=20261124"></script>
+<script src="../assets/js/db.js?v=20261124"></script>
+<script src="../assets/js/admin.js?v=20261124"></script>
+</body>
+</html>

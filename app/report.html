@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>업무 집중도 리포트 | TreeON Office</title>
+<meta name="description" content="TreeON Office 이용자 화면">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://treeon.netlify.app/app/report.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TreeON Office">
+<meta property="og:title" content="업무 집중도 리포트 | TreeON Office">
+<meta property="og:description" content="TreeON Office 이용자 화면">
+<meta property="og:url" content="https://treeon.netlify.app/app/report.html">
+<meta property="og:image" content="https://treeon.netlify.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d2f5f">
+<meta name="img-base" content="../assets/img/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134a92'/%3E%3Cpath d='M18 50V26l14-10 14 10v24M26 50V34h12v16' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='27' r='3' fill='%2300a394'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261124">
+</head>
+<body class="app auth-pending" data-page="report">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="shell">
+  <aside class="side">
+    <a href="../index.html" aria-label="TreeON Office 소개 페이지"><img class="logo" src="../assets/img/logo-white.png" alt="TreeON Office" width="151" height="28"></a>
+    <nav aria-label="이용자 메뉴"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a><a href="reserve.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>오피스 예약</span></a><a href="office.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>오피스 이용</span></a><a href="report.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>집중도 리포트</span></a><a href="approval.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 13l2 2 4-4"/></svg><span>결재 서류</span></a><a href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>이용 안내</span></a></nav>
+    <div class="me"><b data-me-name></b><span data-me-company></span><button type="button" data-logout>로그아웃</button></div>
+  </aside>
+  <div>
+    <header class="topbar"><a href="index.html" aria-label="홈"><img src="../assets/img/logo.png" alt="TreeON Office" width="130" height="24"></a><button type="button" data-logout>로그아웃</button></header>
+    <main class="main" id="main">
+      <p class="sample-flag no-print" style="margin-bottom:18px">시장검증용 체험 버전 · 실제 예약·결제·출입은 이루어지지 않습니다</p>
+
+      <div class="page-head"><div><h1>업무 집중도 리포트</h1><p id="rep-meta"></p></div><div class="btn-row no-print"><button class="btn line sm" id="copy-report" type="button">요약 복사</button><button class="btn sm" id="print-report" type="button">PDF로 저장</button></div></div>
+      <p class="small" id="rep-note" style="margin:-12px 0 18px">실제 이용 데이터가 아닌 샘플입니다. 이용이 끝나면 우리 팀 데이터로 같은 형식의 리포트를 받습니다.</p>
+      <div class="tabs no-print" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-tab="prod">생산성</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="sat">만족도</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="esg">ESG·지역 상생</button>
+      </div>
+      <div data-tabpanel="prod" class="stack">
+        <div class="kpis" id="kpis"></div>
+        <div class="grid-app">
+          <div class="panel c7"><div class="stack-sm" style="gap:2px"><h2>하루 몰입 시간</h2><p class="small">이용 기간 평일 10일 · 팀 평균(시간)</p></div><div class="chart" id="chart-daily"></div></div>
+          <div class="panel c5"><div class="stack-sm" style="gap:2px"><h2>시간대별 끊김 횟수</h2><p class="small">호출·메신저·비계획 회의 · 팀 평균(회)</p></div>
+            <div class="legend"><span><i style="background:#9db0c8"></i>이용 전 2주</span><span><i style="background:#134a92"></i>이용 기간</span></div>
+            <div class="chart" id="chart-int"></div>
+            <details><summary class="small" style="cursor:pointer">표로 보기</summary><div class="table-wrap" style="margin-top:10px"><table id="int-table"></table></div></details>
+          </div>
+          <div class="panel c12"><h2>일정 변화</h2><div class="table-wrap"><table id="milestones"></table></div></div>
+        </div>
+      </div>
+      <div data-tabpanel="sat" class="grid-app" hidden>
+        <div class="panel c6"><h2>좋았던 점</h2><div class="stack" id="pos"></div></div>
+        <div class="panel c6"><h2>아쉬웠던 점</h2><div class="stack" id="neg"></div></div>
+        <div class="panel c12"><h2>항목별 평가</h2><p class="small">팀원 6명 · 5점 만점 평균</p><div class="stack-sm" id="sat"></div></div>
+      </div>
+      <div data-tabpanel="esg" class="stack" hidden>
+        <div class="kpis" id="esg-kpis"></div>
+        <div class="grid-app">
+          <div class="panel c7"><h2>지역 소비 내역</h2><p class="small">이용 기간 팀 전체 · 만원</p><div class="stack-sm" id="spend"></div></div>
+          <div class="panel c5"><h2>이 리포트를 어디에 쓰나요</h2><p class="small" style="font-size:.93rem">팀의 평일 체류는 해당 지역의 생활인구로 집계됩니다. 지역 소비, 유휴시설 가동, 지역 고용 수치는 회사 ESG 보고서의 지역사회 공헌 항목에 그대로 옮길 수 있습니다.</p><p class="small" style="font-size:.93rem">종이 없는 결재 건수는 외부 근무 준비에 들던 서류 작업이 줄었음을 보여 줍니다.</p></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<nav class="tabbar" aria-label="이용자 메뉴"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></a><a href="reserve.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>예약</span></a><a href="office.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12.5l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/></svg><span>이용</span></a><a href="report.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".6"/><rect x="12.5" y="8" width="3" height="9" rx=".6"/><rect x="17.5" y="5" width="2.5" height="12" rx=".6"/></svg><span>리포트</span></a><a href="approval.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 13l2 2 4-4"/></svg><span>서류</span></a><a href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>안내</span></a></nav>
+
+<script src="../assets/js/config.js?v=20261124"></script>
+<script src="../assets/js/data.js?v=20261124"></script>
+<script src="../assets/js/auth.js?v=20261124"></script>
+<script src="../assets/js/db.js?v=20261124"></script>
+<script src="../assets/js/gallery.js?v=20261124"></script>
+<script src="../assets/js/app.js?v=20261124"></script>
+</body>
+</html>

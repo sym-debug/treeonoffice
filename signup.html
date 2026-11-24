@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>회원가입 | TreeON Office</title>
+<meta name="description" content="TreeON Office 회원가입. 예약, 오피스 이용, 몰입 리포트, 결재 서류를 한 곳에서.">
+<link rel="canonical" href="https://treeon.netlify.app/signup.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TreeON Office">
+<meta property="og:title" content="회원가입 | TreeON Office">
+<meta property="og:description" content="TreeON Office 회원가입. 예약, 오피스 이용, 몰입 리포트, 결재 서류를 한 곳에서.">
+<meta property="og:url" content="https://treeon.netlify.app/signup.html">
+<meta property="og:image" content="https://treeon.netlify.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d2f5f">
+<meta name="img-base" content="assets/img/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134a92'/%3E%3Cpath d='M18 50V26l14-10 14 10v24M26 50V34h12v16' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='27' r='3' fill='%2300a394'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261124">
+</head>
+<body>
+<div class="auth">
+<aside class="auth-side">
+  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i><i class="m5"></i><i class="m6"></i></div>
+  <a href="index.html" aria-label="TreeON Office 홈"><img class="logo" src="assets/img/logo.png" alt="TreeON Office" width="163" height="30"></a>
+  <div class="stack">
+    <h2>팀 거점 예약부터 리포트까지,<br>먼저 써 보세요</h2>
+    <ul class="hide-m">
+      <li>공간·날짜·인원을 고르면 팀 1일 금액이 바로 계산됩니다</li>
+      <li>모바일 키와 출퇴근 태그, 회의 공간 예약을 한 화면에서</li>
+      <li>견적서·품의서 초안·근태 확인서를 바로 받습니다</li>
+      <li>이용 전후 몰입 시간을 비교한 리포트 샘플을 볼 수 있습니다</li>
+    </ul>
+  </div>
+  <p class="small hide-m">시장검증용 체험 버전입니다. 실제 예약·결제·출입은 이루어지지 않습니다.</p>
+</aside>
+<main class="auth-main" id="main">
+  <div class="auth-card">
+    <div class="stack-sm"><h1>회원가입</h1><p class="small">이미 계정이 있나요? <a class="link" href="login.html">로그인</a></p></div>
+    <form id="signup-form" class="form" name="signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="signup">
+      <p hidden><label>비워 두세요 <input name="bot-field"></label></p>
+      <div class="field"><label for="s-name">이름<span class="req">*</span></label><input id="s-name" name="name" type="text" required autocomplete="name"></div>
+      <div class="field"><label for="s-company">회사명<span class="req">*</span></label><input id="s-company" name="company" type="text" required autocomplete="organization"></div>
+      <div class="field"><label for="s-dept">부서·직급</label><input id="s-dept" name="dept" type="text" placeholder="예: 인사팀 매니저" autocomplete="organization-title"></div>
+      <div class="field"><label for="s-email">회사 이메일<span class="req">*</span></label><input id="s-email" name="email" type="email" required autocomplete="email"><span class="hint">로그인 아이디로 씁니다.</span></div>
+      <div class="field"><label for="s-phone">연락처</label><input id="s-phone" name="phone" type="tel" autocomplete="tel" placeholder="010-0000-0000"></div>
+      <div class="field"><label for="pw">비밀번호<span class="req">*</span></label><input id="pw" type="password" required minlength="8" autocomplete="new-password"><span class="hint">8자 이상</span></div>
+      <div class="field"><label for="pw2">비밀번호 확인<span class="req">*</span></label><input id="pw2" type="password" required minlength="8" autocomplete="new-password"></div>
+      <label class="check"><input type="checkbox" name="privacy" value="동의" required> <span>서비스 이용을 위한 개인정보 수집·이용에 동의합니다. <a class="link" href="privacy.html" target="_blank">내용 보기</a></span></label>
+      <label class="check"><input type="checkbox" name="marketing" value="수신 동의"> <span>1호점 오픈·무료 체험 소식을 이메일로 받겠습니다 (선택)</span></label>
+      <p id="signup-status" class="form-status" role="alert" hidden></p>
+      <button class="btn block" type="submit">가입하고 시작하기</button>
+    </form>
+    <div id="signup-confirm" class="done" hidden>
+      <h2>인증 메일을 보냈습니다</h2>
+      <p class="lead"><b data-email></b>로 온 메일의 링크를 누르면 가입이 끝납니다.</p>
+      <a class="btn" href="login.html">로그인 화면으로</a>
+    </div>
+  </div>
+</main>
+</div>
+<script src="assets/js/config.js?v=20261124"></script>
+<script src="assets/js/data.js?v=20261124"></script>
+<script src="assets/js/auth.js?v=20261124"></script>
+<script src="assets/js/db.js?v=20261124"></script>
+<script src="assets/js/main.js?v=20261124"></script>
+</body>
+</html>

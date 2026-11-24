@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>로그인 | TreeON Office</title>
+<meta name="description" content="TreeON Office 로그인">
+<link rel="canonical" href="https://treeon.netlify.app/login.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TreeON Office">
+<meta property="og:title" content="로그인 | TreeON Office">
+<meta property="og:description" content="TreeON Office 로그인">
+<meta property="og:url" content="https://treeon.netlify.app/login.html">
+<meta property="og:image" content="https://treeon.netlify.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d2f5f">
+<meta name="img-base" content="assets/img/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134a92'/%3E%3Cpath d='M18 50V26l14-10 14 10v24M26 50V34h12v16' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='27' r='3' fill='%2300a394'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261124">
+</head>
+<body>
+<div class="auth">
+<aside class="auth-side">
+  <div class="mesh" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i><i class="m4"></i><i class="m5"></i><i class="m6"></i></div>
+  <a href="index.html" aria-label="TreeON Office 홈"><img class="logo" src="assets/img/logo.png" alt="TreeON Office" width="163" height="30"></a>
+  <div class="stack">
+    <h2>우리 팀 거점,<br>이 화면에서 관리합니다</h2>
+    <ul class="hide-m">
+      <li>공간·날짜·인원을 고르면 팀 1일 금액이 바로 계산됩니다</li>
+      <li>모바일 키와 출퇴근 태그, 회의 공간 예약을 한 화면에서</li>
+      <li>견적서·품의서 초안·근태 확인서를 바로 받습니다</li>
+      <li>이용 전후 몰입 시간을 비교한 리포트 샘플을 볼 수 있습니다</li>
+    </ul>
+  </div>
+  <p class="small hide-m">시장검증용 체험 버전입니다. 실제 예약·결제·출입은 이루어지지 않습니다.</p>
+</aside>
+<main class="auth-main" id="main">
+  <div class="auth-card">
+    <div class="stack-sm"><h1>로그인</h1><p class="small">처음이신가요? <a class="link" href="signup.html">회원가입</a></p></div>
+    <form id="login-form" class="form" novalidate>
+      <div class="field"><label for="l-email">회사 이메일</label><input id="l-email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="l-pw">비밀번호</label><input id="l-pw" name="password" type="password" required autocomplete="current-password"></div>
+      <p id="login-status" class="form-status" role="alert" hidden></p>
+      <button class="btn block" type="submit">로그인</button>
+      <a href="#" id="forgot" class="small link" style="justify-self:start">비밀번호를 잊으셨나요?</a>
+    </form>
+    <form id="reset-form" class="form" hidden novalidate>
+      <div class="field"><label for="np">새 비밀번호</label><input id="np" type="password" required minlength="8" autocomplete="new-password"><span class="hint">8자 이상</span></div>
+      <div class="field"><label for="np2">새 비밀번호 확인</label><input id="np2" type="password" required minlength="8" autocomplete="new-password"></div>
+      <p id="reset-status" class="form-status" role="alert" hidden></p>
+      <button class="btn block" type="submit">비밀번호 바꾸기</button>
+    </form>
+    <div class="divider" id="demo-divider">또는</div>
+    <button class="btn line block" id="demo-login" type="button">데모 계정으로 둘러보기</button>
+    <p class="small">데모 계정은 가입 없이 예약·이용·리포트 화면을 미리 보는 용도입니다.</p>
+  </div>
+</main>
+</div>
+<script src="assets/js/config.js?v=20261124"></script>
+<script src="assets/js/data.js?v=20261124"></script>
+<script src="assets/js/auth.js?v=20261124"></script>
+<script src="assets/js/db.js?v=20261124"></script>
+<script src="assets/js/main.js?v=20261124"></script>
+</body>
+</html>
